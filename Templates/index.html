@@ -1,0 +1,50 @@
+{% extends 'basic.html' %}
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+
+<section style="overflow-x: hidden;" class="jumbotron text-center">
+  <div class="container mt-5 mb-5">
+    <img src="https://www.source.unsplash/?400x400/webpage,hello" alt="logo" width="120">
+    <h1>Welcome to CodeWithHarry Content Dashboard</h1>
+    <p>This is the Content Dashboard Page. You can submit the content you have written for CodeWithHarry.com.</p>
+    <p>Please Login to Continue :)</p>
+
+  </div>
+
+
+  <div class="row mt-4 mb-4">
+    <div class="card mx-auto my-2 p-2 align-items-center" style="width: 18rem">
+      <img src="https://cdn.pixabay.com/photo/2017/03/21/02/00/user-2160923_960_720.png" class="card-img-top"
+        alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Admin Dashboard</h5>
+        <p class="card-text">
+          Click Below to Login To The Admin Dashboard
+        </p>
+        <a href="/admin" class="btn btn-primary">Login Here</a>
+      </div>
+    </div>
+
+    <div class="card mx-auto my-2 p-2 align-items-center" style="width: 18rem">
+      <img src="https://cdn.pixabay.com/photo/2017/03/21/02/00/user-2160923_960_720.png" class="card-img-top"
+        alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">Writer Dashboard</h5>
+        <p class="card-text">
+          Click Below to Login To The Content Writer Dashboard
+        </p>
+        <a href="/dashboard" class="btn btn-primary">Login Here</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock body %}
+
+{% block js %}
+<script>
+
+  console.log("HEllo aunty")
+</script>
+{% endblock js %}

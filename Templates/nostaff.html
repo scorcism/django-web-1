@@ -1,0 +1,44 @@
+{% extends 'basic.html' %}
+{% block title %}About{% endblock title %}
+{% block css %}
+
+<style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+{% endblock css %}
+
+
+{% block body %}
+
+<main role="main" class="container" style="border:2px solid black;margin-top: 20px;height: 400px; ">
+    <div class="container align-center">
+
+        <div class="starter-template">
+            <h1>No staff Create Yet</h1>
+            <p class="lead">This is for the user who have not logged in yet <b>Login to see all the staffs !!! Confidntial</b></p>
+            </p>
+        </div>
+        <a href="/loginUser"><button class="btn btn-success">Login</button></a>
+    </div>
+{% endblock body %}
+
+{% block js %}
+<script>
+
+    console.log("HEllo aunty")
+</script>
+{% endblock js %}

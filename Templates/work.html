@@ -1,0 +1,40 @@
+{% extends 'basic.html' %}
+{% block title %}Your Work -CWH{% endblock title %}
+
+{% block body %}
+
+<div class="my-1 py-2">
+    <div class="row col-md-12" style="background-color: pink;">
+{% for i in work %}
+        <div class="card mx-4 my-2 px-1" style="width: 18rem;">
+            <div class="card-body">
+                <h3>{{request.user}}</h3>
+                {% if request.user and i.name %}
+                {% comment %} <h1>Hello kaku</h1> {% endcomment %}
+                <h5 class="card-title"> Lord- <b>{{i.name}}</b></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Of Team: <b>{{i.team}}</b></h6>
+                <hr>
+                <p class="card-text"> <u> What To Do </u>: <b> {{i.ToWork}}</b></p>
+                <p class="card-text">Playlist Link: <a href="{{i.Link}}"> {{i.Link}}</a></p>
+                <p class="card-text">Last Date: <b>{{i.lastDate}}</b></p>
+                <hr>
+                <button class="btn btn-danger">Got It</button>
+                {% endif %}
+            </div>
+        </div>
+{% endfor %}
+    </div>
+</div>
+{% endblock body %}
+
+{% block js %}
+<script>
+console.log("Hello")
+</script>
+
+{% endblock js %}
+
+
+
+
+

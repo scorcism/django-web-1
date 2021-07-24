@@ -1,0 +1,98 @@
+{% extends 'basic.html' %}
+{% block title %}Login{% endblock title %}
+
+
+{% block css %}
+<style>
+    * {
+        overflow-x: hidden ;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .form {
+ 
+        background-color: rgb(98, 98, 219);
+        width: 100vw;
+        display: flex;
+        margin: 0 auto;
+        height: 90vh;
+        justify-content: flex-end;
+    }
+
+    .form-cls {
+        border-radius: 18px;
+        background-color: transparent;
+        margin: auto;
+        border: 2px solid #b1b161;
+        height: 294px;
+
+    }
+
+    .h1,
+    .up,
+    .down {
+        align-items: center;
+        margin: 12px;
+        padding: 2px;
+        display: flex;
+        padding: 12px;
+    }
+
+    .up,
+    .down {
+        font-weight: 500;
+        display: flex;
+        color: rgb(253, 30, 30);
+        background-color: rgb(240, 234, 225);
+        font-size: 18px;
+        border-radius: 12px;
+        border: 1px solid blue;
+        outline: none;
+    }
+
+    .btn {
+        background: transparent;
+        margin-left: 107px;
+        padding: 2px 13px;
+        font-size: 20px;
+        margin-bottom: 15px;
+        outline: none;
+        border: 0px;
+        cursor: pointer;
+        font-family: ui-sans-serif;
+    }
+
+    .btn:hover {
+        border-bottom: 3px solid blue;
+    }
+
+    .h1 {
+        border-bottom: 2px solid blue;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+</style>
+{% endblock css %}
+
+{% block body %}
+<div class="content" style="max-height: 80%;" >
+    <div class="form">
+        <form class="form-cls" method="post" action="/loginUser">
+            {% csrf_token %}
+            <h3 class="h1" ">Enter the correct LogIn Credetials:</h3>
+            <input type=" text" name="username" name='username' class="up" placeholder="Enter your username: ">
+            <input type="password" name="password" name='password' class="down" placeholder="Enter your Password: ">
+            <Button class="btn">Login</Button>
+        </form>
+    </div>
+</div>
+{% endblock body %}
+
+{% block js %}
+<script>
+
+    console.log("HEllo aunty")
+
+</script>
+{% endblock js %}

@@ -1,0 +1,46 @@
+{% extends 'basic.html' %}
+{% block title %}Dashboard{% endblock title %}
+
+
+{% block body %}
+<div class="container">
+  <form class="row g-3" method="post" action="/dashboard" enctype="multipart/form-data"  >
+    <h4>Kindly make the <b>Zip</b> file and <b>upload</b></h4>
+    <hr>
+      {% csrf_token %}
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Name</label>
+        <input type="text" name="name" class="form-control" id="inputEmail4" placeholder="Your Full Name">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Team</label>
+        <input type="text" name="team" class="form-control" id="inputPassword4" placeholder="Team name">
+      </div>
+      <div class="col-md-12">
+        <label for="inputPassword4" class="form-label">Topic Name | Folder Name</label>
+        <input type="text" name="topic" class="form-control" id="inputPassword4" placeholder="Topic Name | Folder Name">
+      </div>
+      <div class="mb-2">
+        <label for="exampleFormControlTextarea1" class="form-label">Extra Info</label>
+        <textarea class="form-control" name="extra" id="exampleFormControlTextarea1" rows="2"></textarea>
+      </div>
+      <div class="col-6">
+        <label for="inputAddress" class="form-label">Zip File</label>
+        <input type="file" class="form-control" name="zipFile" id="filedimg">
+      </div>
+      <div class="row my-5">
+        <div class="col-md-6">
+          <button type="Submit" class="btn btn-primary">Submit</button>
+        </div>
+
+      </div>
+  </form>
+</div>
+{% endblock body %}
+
+
+{% block js %}
+<script>
+  console.log("Hello aunty")
+</script>
+{% endblock js %}

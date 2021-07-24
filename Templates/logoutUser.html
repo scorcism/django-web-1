@@ -1,0 +1,20 @@
+{% extends 'basic.html' %}
+{% block title %}About{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, {{user}}</h1>
+        <p class="lead"><b>Thank You For Giving Your Precious Time</b></p>
+        <hr class="my-4">
+        <a class="btn btn-primary btn-lg" href="/loginUser" role="button">Login</a>
+    </div>
+</div>
+{% endblock body %}
+
+{% block js %}
+<script>
+
+    console.log("HEllo aunty")
+</script>
+{% endblock js %}
